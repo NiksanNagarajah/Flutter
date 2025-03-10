@@ -1,11 +1,10 @@
-import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:td2/models/my_api.dart';
 import 'models/task.dart';
 
-class EcranInformation extends StatelessWidget {
-  const EcranInformation({super.key});
+class EcranJsonFetchedTask extends StatelessWidget {
+  const EcranJsonFetchedTask({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -32,6 +31,7 @@ class EcranInformation extends StatelessWidget {
                 title: Text(tache.title),
                 subtitle: Text("Description : " + tache.description + (tache.tags.isNotEmpty ? "\n• ${tache.tags.join("\n• ")}" : "") //+ tache.id.toString()subtitle: Text(task.description),
                 ),
+                trailing: Text("⌛ ${tache.nbhours}h"),
                 mouseCursor: SystemMouseCursors.click,
               )
             );

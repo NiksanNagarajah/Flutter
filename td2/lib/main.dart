@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:td2/bottomnavigationbar.dart';
-import 'package:td2/ecran_contrast.dart';
-import 'package:td2/ecran_home.dart';
-import 'package:td2/ecran_information.dart';
+import 'package:td2/ecran_api_rest_fetched_task.dart';
+import 'package:td2/ecran_generate_task.dart';
+import 'package:td2/ecran_json_fetched_task.dart';
 
 import 'mytheme.dart';
 
@@ -21,9 +21,9 @@ class _MyAppState extends State<MyApp> {
   int _selectedIndex = 0;
   static ThemeData theme = MyTheme.dark();
   final List<Widget> _pages = [
-    EcranHome(),
-    EcranInformation(),
-    EcranContrast()
+    EcranGenerateTask(),
+    EcranJsonFetchedTask(),
+    EcranAPIRestFetchedTask()
   ];
 
   void _onItemTapped(int index) {

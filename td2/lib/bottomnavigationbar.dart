@@ -14,16 +14,16 @@ class BottomNavigationbar extends StatelessWidget {
     return BottomNavigationBar(
       items: const [
         BottomNavigationBarItem(
-          icon: Icon(Icons.home),
-          label: "Home",
+          icon: Icon(Icons.task_rounded),
+          label: "Generated",
         ),
         BottomNavigationBarItem(
-          icon: Icon(Icons.info),
-          label: "Information",
+          icon: Icon(Icons.task_alt_rounded),
+          label: "Json",
         ),
         BottomNavigationBarItem(
-          icon: Icon(Icons.contrast),
-          label: "Contrast",
+          icon: Icon(Icons.web),
+          label: "API Rest",
         ),
       ],
       selectedItemColor: Colors.amber[800],
