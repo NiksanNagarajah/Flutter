@@ -1,0 +1,42 @@
+    
+    return Center(
+        child: // Text("Bienvenue", style: theme.textTheme.titleLarge),
+          ListView.builder(
+              itemBuilder: (BuildContext context, 5) {
+                return Container(
+                  height: 50,
+                child : Center(child: Task.generateTask(5),),
+                )
+              }
+          )
+          // ListView(children: [Task.generateTask(5)]),
+      );
+
+
+    import 'dart:convert';
+    import 'package:flutter/services.dart';
+    import 'task.dart';
+
+    class MyAPI {
+      Future<List<Task>> getTasks() async {
+        await Future.delayed(Duration(seconds: 1)); // Simulation de délai
+        final dataString = await _loadAsset('assets/json/tasks.json');
+        final Map<String, dynamic> json = jsonDecode(dataString);
+        if (json['tasks'] != null) {
+          final List<Task> tasks = [];
+          for (var element in json['tasks']) {
+            tasks.add(Task.fromJson(element)); // Convertir chaque élément en Task
+          }
+          return tasks;
+        } else {
+          return [];
+        }
+      }
+
+      Future<String> _loadAsset(String path) async {
+        return rootBundle.loadString(path);
+      }
+    }
+
+
+
