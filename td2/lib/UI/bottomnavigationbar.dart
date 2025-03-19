@@ -25,10 +25,19 @@ class BottomNavigationbar extends StatelessWidget {
           icon: Icon(Icons.web),
           label: "API Rest",
         ),
+        BottomNavigationBarItem(
+          icon: Icon(Icons.settings),
+          label: "Settings"
+        ),
       ],
       selectedItemColor: Colors.amber[800],
       currentIndex: selectedIndex,
       onTap: onItemTapped,
+      unselectedItemColor: Colors.grey,
+      // unselectedLabelStyle: TextStyle(color: Colors.grey, backgroundColor: Colors.grey),
+      backgroundColor: Colors.white,
+      elevation: 10,
+      // backgroundColor: Colors.grey,
     );
   }
 }

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:td2/models/my_api_rest.dart';
-import 'package:td2/ecran_task_detail.dart';
+import 'package:td2/api/my_api_rest.dart';
+import 'package:td2/UI/ecran_task_detail.dart';
 
 class EcranAPIRestFetchedTask extends StatelessWidget {
 
@@ -25,9 +25,9 @@ class EcranAPIRestFetchedTask extends StatelessWidget {
               itemBuilder: (context, index) {
                 var task = snapshot.data![index];
                 return ListTile(
-                  leading: CircleAvatar(backgroundColor: Colors.white10, child: Text(task["id"].toString())),
-                  title: Text(task["title"]),
-                  subtitle: Text("ID: ${task["id"]}"),
+                  leading: CircleAvatar(backgroundColor: Colors.white10, child: Text(task.id.toString())),
+                  title: Text(task.title),
+                  subtitle: Text("ID: ${task.id}"),
                   onTap: () {
                     Navigator.push(
                       context,

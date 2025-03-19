@@ -1,6 +1,6 @@
 import 'dart:convert';
 import 'package:flutter/services.dart';
-import 'task.dart';
+import '../models/task.dart';
 
 class MyAPI{
   Future<List<Task>> getTasks() async{

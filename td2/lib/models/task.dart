@@ -7,6 +7,7 @@ class Task {
   int nbhours;
   int difficuty;
   String description;
+  static int nb=5;
 
   Task({required this.id,required this.title,required this.tags,required
   this.nbhours,required this.difficuty,required this.description});
@@ -21,5 +22,10 @@ class Task {
 
   static Task fromJson(element) {
     return Task(id: element["id"], title: element["title"], tags: element["tags"].cast<String>(), nbhours: element["nbhours"], difficuty: element["difficulty"], description: element["description"]);
+  }
+
+  factory Task.newTask(){
+    nb++; //attribut static de la classe.
+    return Task(id: nb, title: 'title $nb', tags: ['tags $nb'], nbhours: nb, difficuty: nb%5, description: 'description $nb');
   }
 }

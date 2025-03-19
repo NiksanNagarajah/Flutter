@@ -1,7 +1,7 @@
 
 import 'package:flutter/material.dart';
-import 'package:td2/models/my_api.dart';
-import 'models/task.dart';
+import 'package:td2/api/my_api.dart';
+import '../models/task.dart';
 
 class EcranJsonFetchedTask extends StatelessWidget {
   const EcranJsonFetchedTask({super.key});
